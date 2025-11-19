@@ -1,0 +1,242 @@
+.dashboard-modern {
+  margin: 0 auto;
+  padding: 24px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: #f9fafb;
+  min-height: 100vh;
+}
+
+.dashboard-header-modern {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.dashboard-header-modern h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+}
+
+.controls-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.search-wrapper {
+  position: relative;
+  max-width: 300px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.search-wrapper input {
+  width: 100%;
+  padding: 14px 16px 14px 38px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.search-wrapper input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  opacity: 1;
+  color: #667eea;
+  pointer-events: none;
+}
+
+.table-container {
+  background: white;
+  border-radius: 16px;
+  overflow-y: auto; /* Added for vertical scrollbar */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.modern-table th {
+  background: #f8fafc;
+  padding: 16px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.modern-table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.table-row:hover {
+  background-color: #f8fafc;
+  transition: background 0.2s;
+}
+
+.name-cell strong {
+  color: #1f2937;
+}
+
+.email-link {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+.subject-cell {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.source-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.delete-btn-modern {
+  background: #fef2f2;
+  color: #dc2626;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.delete-btn-modern:hover {
+  background: #fecaca;
+  transform: scale(1.05);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  color: #9ca3af;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+}
+
+.pagination-modern {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+}
+
+.pagination-modern button {
+  padding: 10px 16px;
+  border: 1px solid #d1d5db;
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.pagination-modern button:hover:not(:disabled) {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.pagination-modern button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-numbers {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.page-numbers button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-weight: 600;
+}
+
+.page-numbers button.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+@media (max-width: 768px) {
+  .dashboard-modern {
+    padding: 16px;
+  }
+  
+  .dashboard-header-modern {
+    flex-direction: column;
+  }
+  
+  .controls-bar {
+    flex-direction: column;
+  }
+  
+  .modern-table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .pagination-modern {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .page-numbers {
+    order: -1;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+}

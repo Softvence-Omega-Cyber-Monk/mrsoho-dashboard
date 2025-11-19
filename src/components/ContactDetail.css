@@ -1,0 +1,121 @@
+.contact-detail-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: #333;
+  position: relative; /* Needed for absolute positioning of back button */
+}
+
+.contact-detail-header {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.contact-detail-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 600px) {
+  .contact-detail-card {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.detail-item {
+  background-color: #f9fafb;
+  padding: 18px 20px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: all 0.2s ease-in-out;
+}
+
+.detail-item:hover {
+  background-color: #edf2f7; /* Slightly darker on hover */
+  border-color: #cbd5e0;
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.detail-item strong {
+  color: #4b5563;
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.detail-item a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.detail-item a:hover {
+  text-decoration: underline;
+}
+
+.back-button {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+}
+
+.back-button:hover {
+  background: #5a67d8;
+  transform: translateY(-1px);
+}
+
+.back-button svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-detail-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .contact-detail-header {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .detail-item {
+    padding: 15px;
+  }
+
+  .back-button {
+    top: 20px;
+    left: 20px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+}
